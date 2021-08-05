@@ -1,3 +1,4 @@
+import 'package:basic_app/second.dart';
 import 'package:flutter/material.dart';
 
 
@@ -107,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: const EdgeInsets.all(32.0),
               child:
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
                 MaterialButton(
                   onPressed: _mainButton,
                   child: Text('Dialog'),
@@ -118,6 +119,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   elevation: 7.0,
                   clipBehavior: Clip.antiAlias,
                 ),
+
+                    MaterialButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SecondScreen()),);
+                      },
+                      child: Text('2nd Screen'),
+                      color: Colors.green,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0)),
+                      elevation: 7.0,
+                      clipBehavior: Clip.antiAlias,
+                    ),
               ]),
             )
           ],
